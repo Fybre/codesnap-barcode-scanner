@@ -8,7 +8,7 @@ A modern, feature-rich barcode scanner application built with React Native and E
 
 - **Multi-Format Support**: Scan QR codes, UPC, EAN, Code 128, Code 39, and more
 - **Scan History**: Keep track of all your scans with expandable details
-- **Smart Duplicate Prevention**: Prevents duplicate scans on iOS devices
+- **Ignore Duplicates**: Optionally skip barcodes already in history with haptic feedback
 - **Auto-Resume**: Configurable auto-resume with customizable delay
 - **Copy to Clipboard**: Automatically copy scanned values
 - **URL Detection**: Automatically detect and open web links
@@ -118,10 +118,11 @@ Builds will be available at [expo.dev](https://expo.dev) when complete.
 
 Access settings from the Settings tab to customize:
 
-- **Enabled Barcode Types**: Toggle which barcode formats to scan
+- **Copy to Clipboard**: Automatically copy scanned values
+- **Ignore Duplicates**: Skip barcodes already in history (with haptic feedback)
 - **Auto-Resume Scanning**: Automatically resume scanning after a delay
 - **Auto-Resume Delay**: Customize the delay (1-10 seconds)
-- **Auto Copy to Clipboard**: Automatically copy scanned values
+- **Enabled Barcode Types**: Toggle which barcode formats to scan
 
 ### App Configuration
 
@@ -138,20 +139,23 @@ Edit `app.json` to customize:
 codesnap-barcode-scanner/
 ├── app/
 │   ├── (tabs)/
+│   │   ├── _layout.tsx        # Tab navigation layout
 │   │   ├── index.tsx          # Main scanner screen
-│   │   ├── settings.tsx       # Settings screen
-│   │   └── _layout.tsx        # Tab navigation layout
-│   ├── about.tsx              # About screen
-│   └── _layout.tsx            # Root layout
+│   │   └── settings.tsx       # Settings screen
+│   ├── _layout.tsx            # Root layout
+│   └── about.tsx              # About screen
 ├── assets/
-│   └── images/                # App icons and images
+│   ├── images/                # App icons and images
+│   └── screenshots/           # App screenshots for README
 ├── context/
 │   └── AppContext.tsx         # Global app state management
 ├── types/
 │   └── barcode.ts             # TypeScript type definitions
 ├── app.json                   # Expo configuration
 ├── eas.json                   # EAS Build configuration
-└── package.json               # Dependencies
+├── tsconfig.json              # TypeScript configuration
+├── package.json               # Dependencies
+└── LICENSE                    # MIT License
 ```
 
 ## Technologies Used
