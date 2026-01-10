@@ -18,9 +18,9 @@ A modern, feature-rich barcode scanner application built with React Native and E
 
 ## Screenshots
 
-<div align="center">
-  <i>Coming soon</i>
-</div>
+| Scan Screen | Settings | About |
+|:-----------:|:--------:|:-----:|
+| <img src="assets/screenshots/Android_Scan_Screen_1.jpg" alt="Scan screen" width="250" /> | <img src="assets/screenshots/Android_Settings_1.jpg" alt="Settings screen" width="250" /> | <img src="assets/screenshots/Android_About_1.jpg" alt="About screen" width="250" /> |
 
 ## Getting Started
 
@@ -35,17 +35,20 @@ A modern, feature-rich barcode scanner application built with React Native and E
 ### Installation
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/Fybre/codesnap-barcode-scanner.git
 cd codesnap-barcode-scanner
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 ```
 
 3. Start the development server:
+
 ```bash
 npx expo start
 ```
@@ -60,11 +63,13 @@ npx expo start
 ### Using EAS Build (Recommended)
 
 1. Install EAS CLI:
+
 ```bash
 npm install -g eas-cli
 ```
 
 2. Log in to your Expo account:
+
 ```bash
 eas login
 ```
@@ -72,16 +77,19 @@ eas login
 3. Build for production:
 
 **Android (APK):**
+
 ```bash
 eas build --platform android --profile production
 ```
 
 **iOS:**
+
 ```bash
 eas build --platform ios --profile production
 ```
 
 **Both platforms:**
+
 ```bash
 eas build --platform all --profile production
 ```
@@ -118,6 +126,7 @@ Access settings from the Settings tab to customize:
 ### App Configuration
 
 Edit `app.json` to customize:
+
 - App name and slug
 - Bundle identifiers
 - Icon and splash screen
