@@ -1,0 +1,52 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Transparent background - content centered in safe zone (inner 66%) -->
+
+  <!-- Scan frame corners -->
+  <!-- Top Left -->
+  <path d="M282 402 L282 282 L402 282" stroke="#007AFF" stroke-width="36" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <!-- Top Right -->
+  <path d="M622 282 L742 282 L742 402" stroke="#007AFF" stroke-width="36" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <!-- Bottom Left -->
+  <path d="M282 622 L282 742 L402 742" stroke="#007AFF" stroke-width="36" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <!-- Bottom Right -->
+  <path d="M622 742 L742 742 L742 622" stroke="#007AFF" stroke-width="36" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+  <!-- Stylized QR/Barcode pattern -->
+  <!-- Row 1 -->
+  <rect x="352" y="352" width="72" height="72" rx="8" fill="#FFFFFF"/>
+  <rect x="448" y="352" width="48" height="72" rx="8" fill="#FFFFFF"/>
+  <rect x="528" y="352" width="72" height="72" rx="8" fill="#FFFFFF"/>
+  <rect x="624" y="352" width="48" height="72" rx="8" fill="#FFFFFF"/>
+
+  <!-- Row 2 -->
+  <rect x="352" y="448" width="48" height="48" rx="8" fill="#FFFFFF"/>
+  <rect x="432" y="448" width="72" height="48" rx="8" fill="#FFFFFF"/>
+  <rect x="552" y="448" width="48" height="48" rx="8" fill="#FFFFFF"/>
+  <rect x="632" y="448" width="40" height="48" rx="8" fill="#FFFFFF"/>
+
+  <!-- Center scan line -->
+  <rect x="312" y="504" width="400" height="24" rx="12" fill="#007AFF"/>
+  <rect x="312" y="504" width="400" height="24" rx="12" fill="url(#scanGlow)"/>
+
+  <!-- Row 3 -->
+  <rect x="352" y="552" width="48" height="48" rx="8" fill="#FFFFFF"/>
+  <rect x="424" y="552" width="72" height="48" rx="8" fill="#FFFFFF"/>
+  <rect x="528" y="552" width="48" height="48" rx="8" fill="#FFFFFF"/>
+  <rect x="600" y="552" width="72" height="48" rx="8" fill="#FFFFFF"/>
+
+  <!-- Row 4 -->
+  <rect x="352" y="624" width="72" height="72" rx="8" fill="#FFFFFF"/>
+  <rect x="448" y="624" width="48" height="72" rx="8" fill="#FFFFFF"/>
+  <rect x="528" y="640" width="40" height="56" rx="8" fill="#FFFFFF"/>
+  <rect x="592" y="624" width="48" height="72" rx="8" fill="#FFFFFF"/>
+  <rect x="656" y="640" width="32" height="56" rx="8" fill="#FFFFFF"/>
+
+  <!-- Gradient definitions -->
+  <defs>
+    <linearGradient id="scanGlow" x1="312" y1="516" x2="712" y2="516" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#007AFF" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#00D4FF" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#007AFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+</svg>
