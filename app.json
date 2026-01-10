@@ -9,6 +9,7 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
+      "bundleIdentifier": "com.fybre.codesnap",
       "supportsTablet": true,
       "splash": {
         "image": "./assets/images/icon.png",
@@ -17,6 +18,7 @@
       }
     },
     "android": {
+      "package": "com.fybre.codesnap",
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/android-icon-foreground.png",
         "backgroundColor": "#1C1C1E"
