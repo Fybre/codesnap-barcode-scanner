@@ -72,6 +72,17 @@ export default function AboutScreen() {
         <Text style={styles.description}>
           CodeSnap is a fast and simple barcode scanner that supports multiple barcode formats including QR codes, UPC, EAN, Code 128, and more.
         </Text>
+        <Text style={styles.description}>
+          This app is open source software, licensed under the MIT License.
+        </Text>
+        <TouchableOpacity
+          style={styles.githubRow}
+          onPress={() => openUrl('https://github.com/Fybre/codesnap-barcode-scanner')}
+        >
+          <Ionicons name="logo-github" size={20} color="#FFFFFF" />
+          <Text style={styles.githubText}>View on GitHub</Text>
+          <Ionicons name="open-outline" size={18} color="#8E8E93" />
+        </TouchableOpacity>
       </View>
 
       <View style={styles.section}>
@@ -154,8 +165,25 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: '#8E8E93',
     paddingHorizontal: 16,
-    paddingBottom: 16,
+    paddingBottom: 12,
     lineHeight: 20,
+  },
+  githubRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: 16,
+    paddingVertical: 12,
+    marginTop: 4,
+    marginBottom: 12,
+    marginHorizontal: 12,
+    backgroundColor: '#2C2C2E',
+    borderRadius: 8,
+  },
+  githubText: {
+    flex: 1,
+    fontSize: 16,
+    color: '#FFFFFF',
+    marginLeft: 12,
   },
   attributionNote: {
     fontSize: 13,
