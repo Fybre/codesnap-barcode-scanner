@@ -1,50 +1,181 @@
-# Welcome to your Expo app 👋
+# CodeSnap - Barcode Scanner
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A modern, feature-rich barcode scanner application built with React Native and Expo. Scan multiple barcode formats, manage scan history, and customize settings to fit your workflow.
 
-## Get started
+![CodeSnap Icon](./assets/images/icon.png)
 
-1. Install dependencies
+## Features
 
-   ```bash
-   npm install
-   ```
+- **Multi-Format Support**: Scan QR codes, UPC, EAN, Code 128, Code 39, and more
+- **Scan History**: Keep track of all your scans with expandable details
+- **Smart Duplicate Prevention**: Prevents duplicate scans on iOS devices
+- **Auto-Resume**: Configurable auto-resume with customizable delay
+- **Copy to Clipboard**: Automatically copy scanned values
+- **URL Detection**: Automatically detect and open web links
+- **Torch Control**: Built-in flashlight for scanning in low light
+- **Haptic Feedback**: Tactile confirmation on successful scans
+- **Dark Mode UI**: Sleek dark interface optimized for all lighting conditions
 
-2. Start the app
+## Screenshots
 
-   ```bash
-   npx expo start
-   ```
+<div align="center">
+  <i>Coming soon</i>
+</div>
 
-In the output, you'll find options to open the app in a
+## Getting Started
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+### Prerequisites
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+- Node.js (v18 or later)
+- npm or yarn
+- Expo CLI
+- iOS Simulator (Mac only) or Android Emulator
+- Physical device for testing camera features
 
-## Get a fresh project
+### Installation
 
-When you're ready, run:
-
+1. Clone the repository:
 ```bash
-npm run reset-project
+git clone https://github.com/Fybre/codesnap-barcode-scanner.git
+cd codesnap-barcode-scanner
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+2. Install dependencies:
+```bash
+npm install
+```
 
-## Learn more
+3. Start the development server:
+```bash
+npx expo start
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+4. Run on your device:
+   - Scan the QR code with the Expo Go app (iOS/Android)
+   - Press `i` for iOS Simulator
+   - Press `a` for Android Emulator
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## Building for Production
 
-## Join the community
+### Using EAS Build (Recommended)
 
-Join our community of developers creating universal apps.
+1. Install EAS CLI:
+```bash
+npm install -g eas-cli
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+2. Log in to your Expo account:
+```bash
+eas login
+```
+
+3. Build for production:
+
+**Android (APK):**
+```bash
+eas build --platform android --profile production
+```
+
+**iOS:**
+```bash
+eas build --platform ios --profile production
+```
+
+**Both platforms:**
+```bash
+eas build --platform all --profile production
+```
+
+Builds will be available at [expo.dev](https://expo.dev) when complete.
+
+## Supported Barcode Formats
+
+- **QR Code**
+- **Aztec**
+- **Codabar**
+- **Code 39**
+- **Code 93**
+- **Code 128**
+- **Data Matrix**
+- **EAN-8**
+- **EAN-13**
+- **ITF-14**
+- **PDF417**
+- **UPC-A**
+- **UPC-E**
+
+## Configuration
+
+### Settings
+
+Access settings from the Settings tab to customize:
+
+- **Enabled Barcode Types**: Toggle which barcode formats to scan
+- **Auto-Resume Scanning**: Automatically resume scanning after a delay
+- **Auto-Resume Delay**: Customize the delay (1-10 seconds)
+- **Auto Copy to Clipboard**: Automatically copy scanned values
+
+### App Configuration
+
+Edit `app.json` to customize:
+- App name and slug
+- Bundle identifiers
+- Icon and splash screen
+- Other Expo configuration options
+
+## Project Structure
+
+```
+codesnap-barcode-scanner/
+├── app/
+│   ├── (tabs)/
+│   │   ├── index.tsx          # Main scanner screen
+│   │   ├── settings.tsx       # Settings screen
+│   │   └── _layout.tsx        # Tab navigation layout
+│   ├── about.tsx              # About screen
+│   └── _layout.tsx            # Root layout
+├── assets/
+│   └── images/                # App icons and images
+├── context/
+│   └── AppContext.tsx         # Global app state management
+├── types/
+│   └── barcode.ts             # TypeScript type definitions
+├── app.json                   # Expo configuration
+├── eas.json                   # EAS Build configuration
+└── package.json               # Dependencies
+```
+
+## Technologies Used
+
+- **React Native**: Cross-platform mobile framework
+- **Expo**: Development platform and build system
+- **Expo Camera**: Camera API with barcode scanning
+- **Expo Router**: File-based navigation
+- **TypeScript**: Type-safe development
+- **AsyncStorage**: Persistent local storage
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Author
+
+**Craig** - [fybre.me](https://fybre.me)
+
+## Acknowledgments
+
+- Built with [Expo](https://expo.dev)
+- Icons from [Ionicons](https://ionic.io/ionicons)
+- Developed with assistance from Claude (Anthropic)
+
+## Support
+
+For issues, questions, or suggestions, please open an issue on [GitHub](https://github.com/Fybre/codesnap-barcode-scanner/issues).
+
+---
+
+Made with ❤️ using React Native and Expo
