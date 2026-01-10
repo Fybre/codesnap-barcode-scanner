@@ -143,7 +143,7 @@ export default function ScannerScreen() {
   }, [settings.autoResume, settings.autoResumeDelaySeconds]);
 
   const handleBarcodeScanned = useCallback(
-    (result: BarcodeScanningResult) => {
+    async (result: BarcodeScanningResult) => {
       if (!isScanning) return;
 
       const barcodeType = result.type as BarcodeType;
@@ -160,9 +160,22 @@ export default function ScannerScreen() {
         return;
       }
 
-      setIsScanning(false);
       lastScannedValueRef.current = result.data;
       lastScannedTimeRef.current = now;
+
+      // Check if this barcode already exists in history
+      if (settings.ignoreDuplicates) {
+        const isDuplicate = scanHistory.some(scan => scan.value === result.data);
+        if (isDuplicate) {
+          // Double vibration for negative feedback
+          await Haptics.notificationAsync(Haptics.NotificationFeedbackType.Error);
+          await new Promise(resolve => setTimeout(resolve, 100));
+          await Haptics.notificationAsync(Haptics.NotificationFeedbackType.Error);
+          return;
+        }
+      }
+
+      setIsScanning(false);
 
       const newScan: ScannedBarcode = {
         id: `${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
@@ -183,7 +196,7 @@ export default function ScannerScreen() {
 
       startAutoResumeCountdown();
     },
-    [isScanning, settings.enabledBarcodeTypes, settings.autoCopyToClipboard, addScan, startAutoResumeCountdown]
+    [isScanning, settings.enabledBarcodeTypes, settings.autoCopyToClipboard, settings.ignoreDuplicates, scanHistory, addScan, startAutoResumeCountdown]
   );
 
   const handleResume = () => {

@@ -43,6 +43,7 @@ export interface AppSettings {
   autoResume: boolean;
   autoResumeDelaySeconds: number;
   autoCopyToClipboard: boolean;
+  ignoreDuplicates: boolean;
 }
 
 export const DEFAULT_SETTINGS: AppSettings = {
@@ -50,4 +51,5 @@ export const DEFAULT_SETTINGS: AppSettings = {
   autoResume: false,
   autoResumeDelaySeconds: 3,
   autoCopyToClipboard: true,
+  ignoreDuplicates: false,
 };

@@ -124,6 +124,23 @@ export default function SettingsScreen() {
 
         <View style={styles.settingRow}>
           <View style={styles.settingInfo}>
+            <Text style={styles.settingLabel}>Ignore duplicates</Text>
+            <Text style={styles.settingDescription}>
+              Skip barcodes that already exist in history
+            </Text>
+          </View>
+          <Switch
+            value={settings.ignoreDuplicates}
+            onValueChange={(value) =>
+              updateSettings({ ignoreDuplicates: value })
+            }
+            trackColor={{ false: "#3A3A3C", true: "#30D158" }}
+            thumbColor="#FFFFFF"
+          />
+        </View>
+
+        <View style={styles.settingRow}>
+          <View style={styles.settingInfo}>
             <Text style={styles.settingLabel}>Auto-resume scanning</Text>
             <Text style={styles.settingDescription}>
               Automatically continue scanning after a barcode is detected
