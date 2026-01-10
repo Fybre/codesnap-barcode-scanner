@@ -15,7 +15,7 @@
     },
     "production": {
       "ios": {
-        "bundleIdentifier": "com.fybre.codesnap"
+        "bundleIdentifier": "me.fybre.codesnap"
       },
       "android": {
         "buildType": "apk"
