@@ -15,6 +15,9 @@
         "image": "./assets/images/icon.png",
         "resizeMode": "contain",
         "backgroundColor": "#1C1C1E"
+      },
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
       }
     },
     "android": {
@@ -50,6 +53,12 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "e8d0242d-0d74-4d35-bb83-b70dea672bdf"
+      }
     }
   }
 }
