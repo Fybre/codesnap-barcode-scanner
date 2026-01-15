@@ -1,5 +1,6 @@
 # CodeSnap - Barcode Scanner
 
+
 A modern, feature-rich barcode scanner application built with React Native and Expo. Scan multiple barcode formats, manage scan history, and customize settings to fit your workflow.
 
 ![CodeSnap Icon](./assets/images/icon.png)
@@ -16,6 +17,13 @@ A modern, feature-rich barcode scanner application built with React Native and E
 - **Haptic Feedback**: Tactile confirmation on successful scans
 - **Dark Mode UI**: Sleek dark interface optimized for all lighting conditions
 
+## Download
+ <a href="https://apps.apple.com/us/app/codesnap-barcode-scanner/id6757689692?itscg=30200&itsct=apps_box_badge&mttnsubad=6757689692" style="display: inline-block;">
+ <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us?releaseDate=1768348800" alt="Download on the App Store" style="width: 246px; height: 82px; vertical-align: middle; object-fit: contain;" />
+ </a>
+
+ or for Android download the [Latest Release](https://github.com/Fybre/codesnap-barcode-scanner/releases/latest) .apk
+    
 ## Screenshots
 
 | Scan Screen | Settings | About |
